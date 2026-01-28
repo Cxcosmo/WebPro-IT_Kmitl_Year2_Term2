@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 750px;
+}
+
+.card h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card form{
+    display: flex;
+    height: 35px;
+    margin-bottom: 40px;
+}
+
+.card form input{
+    width: 85%;
+    margin-right: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(24, 83, 220);
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+input[type=text]:focus{
+    border: 2px solid rgb(65, 149, 251);
+    background-color: aliceblue;
+    outline: none;
+}
+
+.card form button{
+    width: 15%;
+    border-radius: 8px;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(146, 233, 253);
+    color: rgb(24, 83, 220);
+    border: 0;
+}
+
+.b {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+
+.b button{
+    width: 130px;
+    height: 40px;
+    gap: 5px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(255, 219, 231);
+    color: rgb(253, 55, 124);
+    border: 0;
+}
+
+#movieTable {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item {
+    background-color: rgb(245, 249, 252);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.item button{
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(255, 219, 231);
+    color: rgb(253, 55, 124);
+    border: 0;
+}

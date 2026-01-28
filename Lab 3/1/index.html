@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB3-1</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <form class="logincard">
+        <h1>
+            User Registration
+        </h1>
+        <div class="form_fild">
+            <div class="label">
+                <label for="Username">Username:</label>
+                <input type="text" name="Username" id="Username">
+            </div>
+            <div class="label">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="e.g. 67070xxx@kmitl.ac.th">
+            </div>
+            <div class="label">
+                <label for="Phone">Phone:</label>
+                <input type="tel" name="Phone" id="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="e.g. 123-456-7890">
+            </div>
+            <div class="label">
+                <label for="Password">Password:</label>
+                <input type="password" name="Password" id="Password">
+            </div>
+            <div class="label">
+                <label for="ConfirmPassword">Confirm Password:</label>
+                <input type="password" name="ConfirmPassword" id="ConPass">
+            </div>
+            <button type="submit" onclick="validateForm()">Continue</button>
+        </div>
+    </form>
+</body>
+
+</html>

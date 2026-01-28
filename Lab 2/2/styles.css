@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(2, 3, 18);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tablecontainer {
+    width: 50%;
+    min-width: 300px;
+    border: 2px aliceblue solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 2px aliceblue solid;
+    padding: 10px;
+}
+
+td {
+    border-bottom: 1px aliceblue solid;
+    padding: 10px;
+}
+
+.number {
+    text-align: center;
+}
+
+.score {
+    padding: 5px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 10px;
+}
+
+.score1 {
+    width: 98%;
+    background: #1d296b;
+}
+
+.score2 {
+    width: 85%;
+    background: #306BAC;
+}
+
+.score3 {
+    width: 67%;
+    background: #6F9CEB;
+}
+
+.score4 {
+    width: 72%;
+    background: #80a2dd;
+}
+
+.score5 {
+    width: 69%;
+    background: #918EF4;
+}

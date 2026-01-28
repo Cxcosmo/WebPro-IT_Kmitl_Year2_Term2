@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+#studentList {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 40px;
+}
+
+.card {
+    width: 100%;
+    border: 2px solid rgb(132, 132, 255);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px rgb(216, 236, 255);
+}
+
+.card img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.card h4{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.card p{
+    margin-bottom: 5px;
+}

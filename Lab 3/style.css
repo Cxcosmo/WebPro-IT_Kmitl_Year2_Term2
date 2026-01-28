@@ -1,0 +1,18 @@
+.list {
+    background: #030f44;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.image1 {
+    border-radius: 25px;
+    width: 45%;
+    border: 10px solid rgb(255, 122, 122);
+}
+
+.image2 {
+    border-radius: 25px;
+    width: 45%;
+    border: 10px solid rgb(160, 182, 246);
+}
