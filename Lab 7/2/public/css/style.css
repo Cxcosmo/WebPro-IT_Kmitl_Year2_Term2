@@ -1,0 +1,343 @@
+:root {
+    --background: oklch(0.9582 0.0152 90.2357);
+    --foreground: oklch(0.4153 0.0827 74.3364);
+    --card: oklch(0.9914 0.0098 87.4695);
+    --card-foreground: oklch(0.5642 0.1239 65.5637);
+    --primary: oklch(0.7516 0.1529 68.9580);
+    --secondary: oklch(0.5505 0.0736 58.7916);
+    --muted: oklch(0.9010 0.0293 82.5924);
+    --muted-foreground: oklch(0.6203 0.0078 88.6732);
+    --border: oklch(0.8606 0.0321 84.5881);
+    --radius: 1.25rem;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+}
+
+body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: fit-content;
+    background: var(--background);
+    gap: 150px;
+}
+
+section {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+#home {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.textBackground {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    gap: 200px;
+    padding-bottom: 50px;
+}
+
+.textBackground h1 {
+    font-size: 22rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0.8;
+}
+
+.textBackground .line {
+    margin-top: 40px;
+    position: absolute;
+    width: 90%;
+    height: 10px;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+}
+
+.circle {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.circle h1 {
+    position: absolute;
+    font-size: 4rem;
+    color: var(--card);
+    z-index: 1;
+}
+
+.foodImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    border: solid 30px var(--muted);
+    border-radius: 50%;
+}
+
+.foodImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: textRotation 20s linear infinite;
+}
+
+@keyframes textRotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.text span {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform-origin: 0 325px;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+#meterial, #howTo{
+    display: flex;
+}
+
+.frame {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#meterial .frame img {
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+
+#howTo .frame img {
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+}
+
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+td, li {
+    font-size: 1.2rem;
+    color: var(--foreground);
+    line-height: 1.5;
+}
+
+table {
+    width: 65%;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 70%;
+    color: var(--card-foreground);
+}
+
+ul {
+    padding: 0rem 4rem;
+}
+
+li {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.siteFooter {
+    display: flex;
+    justify-content: space-between;
+    background: var(--card);
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+    border-top: 2px solid var(--border);
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLeft h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.footerLeft p {
+    font-size: 1rem;
+    color: var(--foreground);
+    line-height: 2;
+}
+
+.footerLeft p strong {
+    color: var(--secondary);
+}
+
+.footerRight h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.footerRight li {
+    font-size: 1rem;
+    color: var(--foreground);
+    line-height: 1;
+}
+
+.footerRight ul {
+    padding: 0;
+}
+
+.footerRight a {
+    text-decoration: none;
+    color: var(--secondary);
+    transition: ease 0.2s color;
+}
+
+.footerRight a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+@media (max-width: 1050px) {
+    table {
+        width: 80%;
+    }
+    
+    li {
+        margin-top: 10px;
+    }
+}
+   
+
+@media (max-width: 970px) {
+    body {
+        gap: 2rem;
+    }
+
+    #meterial, #howTo{
+        flex-direction: column;
+        height: fit-content;
+        margin-bottom: 100px;
+    }
+
+    .frame {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    td:first-child {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 730px) {
+    .circle {
+        transform: scale(0.9);
+    }
+    td:first-child {
+        width: 75%;
+    }
+}
+
+@media (max-width: 650px) {
+    section {
+        overflow: hidden;
+    }
+    .circle {
+        transform: scale(0.8);
+        position: absolute;
+    }
+    .frame img {
+        width: 650px;
+        height: 650px;
+        object-fit: cover;
+    }
+
+    h2 {
+        transform: scale(0.8);
+    }
+
+    td, li {
+        font-size: 1rem;
+    }
+
+    li {
+        margin-left: 0;
+        padding: 0;
+        align-items: center;
+        text-align: left;
+    }
+}

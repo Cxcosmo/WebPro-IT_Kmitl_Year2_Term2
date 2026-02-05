@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    z-index: 1;
+}
+
+.navContent {
+    display: flex;
+    width: 500px;
+    gap: 35px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.menu img{
+    width: 30px;
+}
+
+.menu p{
+    font-size: 0.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu:hover {
+    filter: sepia(100%) hue-rotate(0deg) saturate(1000%);
+}
+
+.menu img, #home img, .card a img  {
+    filter: grayscale(100%) brightness(0%) invert(100%);
+}
+
+/* ผมเอา Animation ที่แจกฟรีมาจาก Codepenนะครับ */
+
+.arrow {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow span {
+    display: block;
+    width: 5vw;
+    height: 5vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin-bottom: -50px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shardow {
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+    width: 100%;
+    height: 100vh;
+}
+
+#home img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video {
+    width: 100%;
+}
+
+.pageContainer {
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(32, 33, 38), rgb(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px
+}
+
+.pageContainer h2{
+    font-size: 2rem;
+    margin-top: 80px;
+}
+
+.cardList {
+    display: flex;
+    height: 60%;
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.card {
+    width: 100%;
+    height: 70%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: ;
+    border-left: 3px white solid;
+    border-right: 3px white solid;
+}
+
+.card a { 
+    width: 100%;
+    height: 100%;
+    padding-top: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.card a img{
+    width: 40%;
+}
+
+.card a p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    filter: sepia(100%) hue-rotate(0deg) saturate(1000%);
+}
+
+.header {
+    font-size: 4rem;
+    height: 100px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#Character {
+    display: flex;
+    color: white;
+}
+
+#Character img {
+    width: 1000px;
+}
+
+#Character div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Character .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 70%;
+    gap: 25px;
+}
+
+.laevatain .text {
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+
+.laevatain .text h3 {
+    font-size: 2rem;
+    color: rgb(245, 9, 9);
+}
+
+.laevatain .text p {
+    font-size: 1.2rem;
+}
+
+.ardelia .text {
+    margin-left: 200px;
+    margin-bottom: 100px;
+}
+
+.ardelia .text h3 {
+    font-size: 2rem;
+    color: rgb(255, 175, 235);
+}
+
+.ardelia .text p {
+    font-size: 1.2rem;
+}
+
+#Weapons {
+    display: flex;
+    flex-direction: column;
+}
+
+#Weapons h1 {
+    margin-bottom: 50px;
+}
+
+#Gear {
+    display: flex;
+    flex-direction: column;
+}
+
+#Gear h1 {
+    margin-bottom: 50px;
+}
+
+#ITEMS {
+    display: flex;
+    flex-direction: column;
+}
+
+#ITEMS h1 {
+    margin-bottom: 50px;
+}
+
+.itemList {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.itemCard {
+    width: 300px;
+    height: 500px;
+    color: white;
+    border-radius: 20px;
+}
+
+.itemCard img {
+    width: 100%;
+}
+
+#Fifth, #Hot-Work, #Igneosite{
+    border: 3px solid rgb(245, 9, 9);
+    background-image: linear-gradient(to bottom, rgb(245, 9, 9), rgb(151, 20, 20), rgb(0, 0, 0));
+}
+
+#Dream {
+    border: 3px solid rgb(255, 175, 235);
+    background-image: linear-gradient(to bottom, rgb(255, 175, 235), rgb(156, 38, 126), rgb(0, 0, 0));
+}
+
+#Fall-Light {
+    border: 3px solid rgb(61, 87, 255);
+    background-image: linear-gradient(to bottom, rgb(61, 87, 255), rgb(46, 71, 185), rgb(0, 0, 0));
+}
+
+#Bloodcap {
+    border: 3px solid rgb(107, 46, 13);
+    background-image: linear-gradient(to bottom, rgb(107, 46, 13), rgb(69, 30, 9), rgb(0, 0, 0));
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 10px;
+}
+
+.info h3 {
+    margin-bottom: 20px;
+}
+
+.cardData {
+    display: flex;
+    justify-content: space-between;
+}
