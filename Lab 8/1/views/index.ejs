@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 - 1</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>List of Users</h1>
+    <div class="user_table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach((user) => { %>
+                    <tr>
+                        <td><%= user.id %></td>
+                        <td><%= user.username %></td>
+                        <td><%= user.password %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.firstname %> <%= user.lastname %></td>
+                        <td><%= user.age %></td>
+                        <td><%= user.address %></td>
+                        <td><%= user.phone %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

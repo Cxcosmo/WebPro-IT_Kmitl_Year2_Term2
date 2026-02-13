@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 - 2</title>
+    <link href="/profile.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>Profile Card</h1>
+        <div class="info"><p>ID : </p><p><%= user.id %></p></div>
+        <div class="info"><p>Username : </p><p><%= user.username %></p></div>
+        <div class="info"><p>Password : </p><p><%= user.password %></p></div>
+        <div class="info"><p>Email : </p><p><%= user.email %></p></div>
+        <div class="info"><p>Name : </p><p><%= user.firstname %> <%= user.lastname %></p></div>
+        <div class="info"><p>Age : </p><p><%= user.age %></p></div>
+        <div class="info"><p>Address : </p><p><%= user.address %></p></div>
+        <div class="info"><p>Phone : </p><p><%= user.phone %></p></div>
+        <form action="/" method="Get">
+            <button type="submit" class="logOut">Log - Out</button>
+        </form>
+    </div>
+</body>
+</html>

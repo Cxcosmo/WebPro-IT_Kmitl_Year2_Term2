@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 - 3</title>
+    <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>The most popular albums</h1>
+    <div class="container">
+        <% albums.forEach(album => { %>
+            <div class="card">
+                <img src="<%= album.image %>" alt="<%= album.title %>">
+
+                <div class="info">
+                    <h2><%= album.title %></h2>
+                    <p><strong>Artist:</strong> <%= album.artist %></p>
+                    <p><strong>Album:</strong> <%= album.album %></p>
+                    <p><strong>Year:</strong> <%= album.year %></p>
+                    <p><strong>Genre:</strong> <%= album.genre %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
