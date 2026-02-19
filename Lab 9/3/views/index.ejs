@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9 - 3</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>📦 ระบบติดตามคำสั่งซื้อ</h1>
+    <form action="/add" method="post">
+        <label for="name">ชื่อ:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="product">สินค้า:</label>
+        <input type="text" id="product" name="product" required><br>
+        <label for="address">ที่อยู่:</label>
+        <input type="text" id="address" name="address" required><br>
+        <label for="phone">เบอร์โทร:</label>
+        <input type="text" id="phone" name="phone" required><br>
+        <button type="submit" class="btn">เพิ่มคำสั่งซื้อ</button>
+    </form>
+    <hr>
+    <h1>รายการคำสั่งซื้อ</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ลูกค้า</th>
+                <th>สินค้า</th>
+                <th>สถานะ</th>
+                <th>เปลี่ยนสถานะ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(row => { %>
+                <tr>
+                    <td style="text-align: center;"><%= row.id %></td>
+                    <td><%= row.name %></td>
+                    <td><%= row.product %></td>
+                    <td><%= row.status %></td>
+                    <td>
+                        <form action="/update" method="post">
+                            <input type="hidden" name="id" value="<%= row.id %>">
+                            <select name="status">
+                                <option value="รอดำเนินการ" <%= row.status === 'รอดำเนินการ' ? 'selected' : '' %>>รอดำเนินการ</option>
+                                <option value="กำลังจัดส่ง" <%= row.status === 'กำลังจัดส่ง' ? 'selected' : '' %>>กำลังจัดส่ง</option>
+                                <option value="จัดส่งแล้ว" <%= row.status === 'จัดส่งแล้ว' ? 'selected' : '' %>>จัดส่งแล้ว</option>
+                                <option value="ยกเลิก" <%= row.status === 'ยกเลิก' ? 'selected' : '' %>>ยกเลิก</option>
+                            </select>
+                            <button type="submit">อัปเดต</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

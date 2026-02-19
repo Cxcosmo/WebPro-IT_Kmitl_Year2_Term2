@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9 - 2</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <form action="/submit" method="post">
+        <h1>Question:</h1>
+        <% questions.forEach(question=> { %>
+            <div class="question">
+                <p><%= question.Stem %></p>
+    
+                <div class="options">
+                    <input type="radio" name="q_<%= question.QID %>" value="A">
+                    <label><%= question.Alt_A %></label>
+                </div>
+
+                <div class="options">
+                    <input type="radio" name="q_<%= question.QID %>" value="B">
+                    <label><%= question.Alt_B %></label>
+                </div>
+
+                <div>
+                    <input type="radio" name="q_<%= question.QID %>" value="C">
+                    <label><%= question.Alt_C %></label>
+                </div>
+
+                <div class="options">
+                    <input type="radio" name="q_<%= question.QID %>" value="D">
+                    <label><%= question.Alt_D %></label>
+                </div>
+
+            </div>
+        <% }); %>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
