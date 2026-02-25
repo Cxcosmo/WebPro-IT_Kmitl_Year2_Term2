@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10 - 1</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <h1>My Products</h1>
+    <div class="menu-list">
+        <% menu.forEach(item=> { %>
+            <div class="card">
+                <img src="<%= item.image_url%>" alt="<%= item.name %>">
+                <div class="card-body">
+                    <div class="card-info">
+                        <h2>
+                            <%= item.name %>
+                        </h2>
+                        <p>
+                            <%= item.description %>
+                        </p>
+                    </div>
+                    <a href="/detail/<%= item.product_id %>">
+                        Detail
+                    </a>
+                </div>
+            </div>
+            <% })%>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f8ff;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todo-list {
+    margin-top: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgb(253, 254, 255);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-head h1 {
+    margin: 0;
+    color: rgb(78, 137, 255);
+}
+
+.add-todo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(78, 137, 255);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.add-todo p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(78, 137, 255);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+.todo-table th {
+    background-color: rgb(78, 137, 255);
+    color: white;
+}
+
+.todo-table th, .todo-table td {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid rgb(78, 137, 255);
+}
+
+input[type = "checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: rgb(78, 137, 255);
+}

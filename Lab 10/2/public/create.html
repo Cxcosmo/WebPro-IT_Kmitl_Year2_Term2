@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10 - 2</title>
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+    <div class="create-card">
+        <h1>Create New Todo</h1>
+        <form action="/add" method="POST">
+            <div class="info">
+                <lable for="title">Title:</lable>
+                <input type="text" name="title" required>
+            </div>
+            <div class="info">
+                <lable for="description">Description:</lable>
+                <input type="text" name="description" required>
+            </div>
+            <div class="info">
+                <lable for="deadline">Deadline:</lable>
+                <input type="date" name="deadline" required>
+            </div>
+            <button>Create</button>
+        </form>
+    </div>
+</body>
+</html>
